@@ -95,13 +95,13 @@ def line_structure(line, f, space_count=0, data=""):
 
 def set_dataset_and_get_config(dataset):
     meta.Datasets.TARGET_DATASET = dataset
-    dataset_cfg = getattr(meta.Datasets, dataset.capitalize())  # e.g. meta.Datasets.Uplus
+    dataset_cfg = getattr(meta.Datasets, dataset.capitalize())  # e.g. meta.Datasets.Kitti
     meta.Datasets.DATASET_CONFIGS = dataset_cfg
     print(meta.Datasets.DATASET_CONFIGS)
 
     if dataset == "kitti":
-        basic_anchor = params.Anchor.UPLUS_YOLOv4
-        anchor_resolution = np.array(params.Anchor.UPLUS_RESOLUTION, dtype=np.float32)
+        basic_anchor = params.Anchor.KITTI_YOLOv4
+        anchor_resolution = np.array(params.Anchor.KITTI_RESOLUTION, dtype=np.float32)
     else:
         assert 0, f"{dataset} dataset is NOT expected"
 

@@ -15,17 +15,11 @@ class Anchor:
                             [61, 30], [45, 62], [119, 59],
                             [90, 116], [198, 156], [326, 373]], dtype=np.float32)
 
-    # UPLUS_YOLOv4 = np.array([[34, 39], [60, 90], [109, 50],
-    #                       [103, 144], [151, 224], [238, 164],
-    #                       [211, 312], [259, 411], [449, 427]], dtype=np.float32)
-
-    UPLUS_YOLOv4 = np.array([[42, 51], [121, 52], [79, 52],
+    KITTI_YOLOv4 = np.array([[42, 51], [121, 52], [79, 52],
                              [51, 323], [251, 112], [166, 231],
                              [85, 692], [92, 1079], [282, 396]], dtype=np.float32)
 
-    UPLUS_LANE = np.tan(np.array([-70, -40, 0, 40, 70], dtype=np.float32) / 180. * np.pi)
-    COCO_RESOLUTION = (416, 416)
-    UPLUS_RESOLUTION = (512, 1280)
+    KITTI_RESOLUTION = (416, 416)
 
 
 class TrainingPlan:

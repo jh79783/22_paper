@@ -110,7 +110,7 @@ def test_read_dataset():
 
 def test_load_dataset():
     print("===== start test_read_dataset")
-    dataset = DatasetReader(op.join(cfg.Paths.DATAPATH, "uplus_train")).get_dataset()
+    dataset = DatasetReader(op.join(cfg.Paths.DATAPATH, "kitti_train")).get_dataset()
     for i, x in enumerate(dataset):
         print(f"=== index: {i}, image={x['image'].shape}, bbox={x['bboxes'].shape}"
               f", feature_l={x['feature_l'].shape}, feature_s={x['feature_s'].shape}")
