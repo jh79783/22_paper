@@ -1,1 +1,1 @@
-# 22_paper
+PaperDetector
