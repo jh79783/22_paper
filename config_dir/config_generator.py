@@ -99,10 +99,9 @@ def set_dataset_and_get_config(dataset):
     meta.Datasets.DATASET_CONFIGS = dataset_cfg
     print(meta.Datasets.DATASET_CONFIGS)
 
-    if dataset == "uplus":
+    if dataset == "kitti":
         basic_anchor = params.Anchor.UPLUS_YOLOv4
         anchor_resolution = np.array(params.Anchor.UPLUS_RESOLUTION, dtype=np.float32)
-        meta.Dataloader.ANCHORS_LANE = params.Anchor.UPLUS_LANE
     else:
         assert 0, f"{dataset} dataset is NOT expected"
 

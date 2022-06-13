@@ -15,7 +15,7 @@ class Datasets:
     # specific dataset configs MUST have the same items
     class Kitti:
         NAME = "kitti"
-        PATH = "/home/eagle/mun_workspace/22_paper/kitti"
+        PATH = "/home/eagle/mun_workspace/kitti"
         CATEGORIES_TO_USE = ["Pedestrian", "Car", "Cyclist", "DontCare"]
         CATEGORY_REMAP = {}
         INPUT_RESOLUTION = (320, 1024)  # (4,13) * 64
