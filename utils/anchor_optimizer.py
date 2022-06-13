@@ -53,7 +53,7 @@ def draw_plot(h, w, anchors):
 
 
 def log_tfrecord():
-    target_tfrs = ("uplus_train", "uplus_val")
+    target_tfrs = ("kitti_train", "kitti_val")
     datasets = []
     for tfr in target_tfrs:
         dataset, image_shape = get_dataset(tfr)

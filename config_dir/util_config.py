@@ -58,15 +58,15 @@ def get_valid_category_mask(dataset="kitti"):
     dataset_cfg = cg.set_dataset_and_get_config(dataset)
     renamed_categories = [dataset_cfg.CATEGORY_REMAP[categ] if categ in dataset_cfg.CATEGORY_REMAP else categ
                           for categ in dataset_cfg.CATEGORIES_TO_USE]
-    if dataset == "uplus":
-        for i, categ in enumerate(cfg.Dataloader.CATEGORY_NAMES["major"]):
+    if dataset == "kitti":
+        for i, categ in enumerate(cfg.Dataloader.CATEGORY_NAMES["category"]):
             if categ not in renamed_categories:
                 renamed_categories.insert(i, categ)
 
-    mask = np.zeros((len(cfg.Dataloader.CATEGORY_NAMES["major"]),), dtype=np.int32)
+    mask = np.zeros((len(cfg.Dataloader.CATEGORY_NAMES["category"]),), dtype=np.int32)
     for categ in renamed_categories:
-        if categ in cfg.Dataloader.CATEGORY_NAMES["major"]:
-            index = cfg.Dataloader.CATEGORY_NAMES["major"].index(categ)
-            if index < len(cfg.Dataloader.CATEGORY_NAMES["major"]):
+        if categ in cfg.Dataloader.CATEGORY_NAMES["category"]:
+            index = cfg.Dataloader.CATEGORY_NAMES["category"].index(categ)
+            if index < len(cfg.Dataloader.CATEGORY_NAMES["category"]):
                 mask[index] = 1
     return mask
